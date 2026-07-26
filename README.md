@@ -239,11 +239,6 @@ This project demonstrates practical experience in:
 
 # 🔮 Future Improvements
 
-- User authentication
-- Resume saving
-- Cover letter generation
-- PDF download
-- Resume scoring
 - Interview preparation
 - LinkedIn profile optimization
 - Portfolio generator
