@@ -193,7 +193,7 @@ https://careercraft-ai-zogz.vercel.app/
 
 # 📸 Screenshots
 
-Add screenshots of the following pages.
+The following screenshots showcase the main features and user interface of CareerCraft AI.
 
 ### 🏠 Home Page
 
