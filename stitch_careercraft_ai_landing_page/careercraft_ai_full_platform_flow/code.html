@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CareerCraft AI | Elevate Your Professional Narrative</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-low": "#f2f3ff",
+                        "secondary-container": "#8455ef",
+                        "outline": "#727785",
+                        "on-tertiary-fixed": "#311400",
+                        "inverse-surface": "#283044",
+                        "inverse-on-surface": "#eef0ff",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#adc6ff",
+                        "on-primary-container": "#fefcff",
+                        "secondary": "#6b38d4",
+                        "on-secondary-fixed-variant": "#5516be",
+                        "on-background": "#131b2e",
+                        "surface-container-highest": "#dae2fd",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#0058be",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#adc6ff",
+                        "background": "#faf8ff",
+                        "primary-fixed": "#d8e2ff",
+                        "secondary-fixed": "#e9ddff",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#eaedff",
+                        "tertiary-fixed": "#ffdcc6",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#faf8ff",
+                        "surface-tint": "#005ac2",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#d0bcff",
+                        "surface-variant": "#dae2fd",
+                        "on-primary-fixed": "#001a42",
+                        "primary-container": "#2170e4",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "tertiary-container": "#b75b00",
+                        "on-secondary-container": "#fffbff",
+                        "error-container": "#ffdad6",
+                        "surface": "#faf8ff",
+                        "surface-container-high": "#e2e7ff",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#424754",
+                        "tertiary": "#924700",
+                        "surface-dim": "#d2d9f4",
+                        "tertiary-fixed-dim": "#ffb786",
+                        "outline-variant": "#c2c6d6",
+                        "on-secondary-fixed": "#23005c",
+                        "on-primary-fixed-variant": "#004395",
+                        "on-surface": "#131b2e",
+                        "on-tertiary-container": "#fffbff"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "xs": "0.5rem",
+                        "md": "1.5rem",
+                        "margin-mobile": "16px",
+                        "lg": "2rem",
+                        "sm": "1rem",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "xl": "3rem",
+                        "base": "4px"
+                    },
+                    fontFamily: {
+                        "display-lg": ["Geist"],
+                        "headline-md": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "label-sm": ["Geist"],
+                        "label-md": ["Geist"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Geist"]
+                    },
+                    fontSize: {
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #faf8ff;
+            color: #131b2e;
+            overflow-x: hidden;
+        }
+        .font-geist { font-family: 'Geist', sans-serif; }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            background-color: rgba(255, 255, 255, 0.8);
+            border-bottom: 1px solid rgba(194, 198, 214, 0.2);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(132, 85, 239, 0.1), transparent),
+                        radial-gradient(circle at bottom left, rgba(0, 88, 190, 0.05), transparent);
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        }
+        .ai-glow {
+            box-shadow: 0 0 20px rgba(132, 85, 239, 0.15);
+        }
+        .resume-preview-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .resume-preview-card:hover {
+            transform: scale(1.02);
+            z-index: 10;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 200px;
+        }
+        .accordion-item.active .chevron-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="antialiased">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 glass-nav h-16">
+<nav class="container mx-auto px-md flex justify-between items-center h-full">
+<div class="flex items-center gap-2">
+<img alt="CareerCraft AI Logo" class="h-8 w-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAMbE1RgGyCdKHZU_dvPRFAas48FERg8nDayxzXShnjiPMymkCJPN8rh5ZM9HKonlHRhr2tOFSk5UrXV5SatKWJv2DJKiohsWl6ns7a-cjhMkj9k_VGEnw9fOV4oJMHOZHVgje3VRlXVVSU-ewgHcMGrbMjMBCXSHxm7om2vOyzbfKRQZzMRedAMRED58l2jcJHQV2JQhgTtV2EUhcpAbpmuLdrVlTbervHjTC-HNnCG51kLKUX47e1ilcnFbYTG3tvU2U_k1htlwy"/>
+<span class="font-display-lg text-headline-md tracking-tighter bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">CareerCraft AI</span>
+</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center gap-xl">
+<a class="text-primary font-bold border-b-2 border-primary font-label-md text-label-md transition-all" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all" href="#">Features</a>
+<a class="text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all" href="#">Templates</a>
+<a class="text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all" href="#">Pricing</a>
+<a class="text-on-surface-variant hover:text-primary font-label-md text-label-md transition-all" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-md">
+<button class="hidden sm:block text-on-surface-variant font-label-md text-label-md hover:opacity-80 transition-opacity">Login</button>
+<button class="bg-primary text-on-primary px-sm py-xs rounded-xl font-label-md text-label-md transition-all duration-300 active:scale-95 shadow-sm">Sign Up</button>
+</div>
+</nav>
+</header>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative hero-gradient overflow-hidden min-h-[85vh] flex items-center">
+<div class="container mx-auto px-md grid grid-cols-1 lg:grid-cols-2 gap-xl items-center py-xl">
+<div class="space-y-lg z-10">
+<div class="inline-flex items-center gap-2 px-sm py-1 bg-surface-container rounded-full ai-glow">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-wider">AI-Powered Career Success</span>
+</div>
+<h1 class="font-display-lg text-display-lg md:text-[64px] leading-tight text-on-surface">
+                        Build Professional <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Resumes &amp; Cover Letters</span> with AI
+                    </h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-xl">
+                        Our AI-powered platform helps you craft ATS-friendly resumes and tailored cover letters in minutes. Stand out to recruiters with precision-engineered professional narratives.
+                    </p>
+<div class="flex flex-wrap gap-md">
+<button class="bg-primary hover:bg-primary-container text-on-primary px-lg py-sm rounded-2xl font-headline-md shadow-lg transition-all active:scale-95 flex items-center gap-2">
+                            Get Started
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-white/60 backdrop-blur-sm border border-outline-variant/30 text-on-surface px-lg py-sm rounded-2xl font-headline-md hover:bg-white transition-all shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined">play_circle</span>
+                            Watch Demo
+                        </button>
+</div>
+<div class="flex items-center gap-sm pt-md">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-white bg-surface-container-high" data-alt="Close up professional portrait of a smiling businessman in a navy suit, high-end corporate photography style with soft natural office lighting and a slight background blur, modern professional aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAAK-hai7AsAPVbDoOyjjP928M3aLZZTQT-X4bCkdOnvVLQdaXH4xcWUfX4jCKleoAcFYNQxN-sAXxo_nbdL4lzAyFUJGUhjdimfoI9gu7dSnTOwLqEvRXsfSWL7jCXOU0hhTpJp5lxwy4wp9TsxIlmxecHx7-vgO1ZyZo-zRMLoyFHk_7_fkco886Kp7Jm5cknecrj8uQfLSfwWyi97D_l8GdNsJFJqHwfnjRVKwAW5W6om_2qNhQoOgYEKjNPz7HwDYrDKqIi20Oj')"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-surface-container-high" data-alt="Close up portrait of a young professional woman with glasses, smiling warmly, soft studio lighting with a clean minimalist background, vibrant and high-quality aesthetic reflecting career success." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxitCf5nud5Emp9x2Zv0YKZo579urD7Q8p_CH4_hKVI5-opuusTRXox3pVCQMrFNXSHvn7WSKIJwq5joJeAPzlI09L8xiss79fX-iDGRHV8KJeiNksJWjtx66tWlwGB8ZupVsiW6mcgWx4eZzxVsDehfRkSk-HFoY0MBWFVULW152uH3Ugu9KkPCZEvYjyhNTU4d7mh5e814Obw6V49XT5Xl_A22UJoldH_TZr2cbeGZODBjsHvj8tTKiqN_9wU4FiuzCIYIOV-Quo')"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-surface-container-high" data-alt="Portrait of a creative designer in a stylish modern office setting, natural daylight from a large window, contemporary SaaS professional look, warm tones and high-key brightness." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAgP_PKMYxZdD7ZcoaxFSM8MGG-bnfP8pPEpvLACB_SndYHMvL6HsfSHtU_oI9HTIPPs91vqvRg5AYbt6YWYbcFwLutytsNUvI7nkRjENB4uNDOt7aY8RE_p-GIoOsinaAcMXud-TYXkUj8hN2sZ39vXYEbU83-oN0hQP5kUjXlWYB6cZbyexCQLIL7-nP7KLpusatzyS0UPoe4_FdSLOimz3pLDCbFXq8FxrwpCVzgsScATY7Y2qBphYmdQwVWYbviAR1VXRfr7XmX')"></div>
+</div>
+<p class="text-on-surface-variant text-label-md font-body-md"><span class="font-bold text-on-surface">10,000+</span> professionals already hired</p>
+</div>
+</div>
+<div class="relative lg:h-[600px] flex items-center justify-center">
+<div class="absolute inset-0 bg-primary/5 blur-[120px] rounded-full"></div>
+<img alt="AI Resume Builder Interface" class="relative z-10 w-full h-auto drop-shadow-2xl rounded-2xl border border-white/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-DX2wEbndv1N69J0hNgRjlBN89fBPxNSmGcczEZ3nnwNM9AfvvSS-0ulu3Sn4hZOA3kXyoaWtURXRDjiKF3fc66sD0XBD7tOcnitfNfTdoudM-XGS1aK66R7IvRpZHu_LczRpHWDgjLi6GS8h9F3PxK7o4rcpj7qWcO85OFbDj6rA79xoYY-RIjYN01OCsU-c_fCZ9Q9czmXGxXAdSRMwxuVDoS2dmvrtOVb4hQJ6YFQCXfwpsMf15Q1kyYDsmk7_v5NdcGG-gPbH"/>
+</div>
+</div>
+</section>
+<!-- Features Bento Grid -->
+<section class="py-xl bg-white">
+<div class="container mx-auto px-md">
+<div class="text-center mb-xl space-y-sm">
+<h2 class="font-display-lg text-headline-lg text-on-surface">Powerful AI Tools for Your Next Move</h2>
+<p class="text-on-surface-variant font-body-md text-body-md max-w-2xl mx-auto">Everything you need to navigate the modern job market, powered by cutting-edge language models tailored for career success.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Feature Card 1 -->
+<div class="feature-card p-lg bg-surface-container-lowest border border-outline-variant/10 rounded-2xl transition-all duration-300">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary">description</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">AI Resume Builder</h3>
+<p class="text-on-surface-variant font-body-md">Generate high-impact bullet points and summaries that catch the eye of hiring managers instantly.</p>
+</div>
+<!-- Feature Card 2 -->
+<div class="feature-card p-lg bg-surface-container-lowest border border-outline-variant/10 rounded-2xl transition-all duration-300">
+<div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-secondary">mail</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">AI Cover Letter Generator</h3>
+<p class="text-on-surface-variant font-body-md">Create hyper-personalized cover letters for every application based on the specific job description.</p>
+</div>
+<!-- Feature Card 3 -->
+<div class="feature-card p-lg bg-surface-container-lowest border border-outline-variant/10 rounded-2xl transition-all duration-300">
+<div class="w-12 h-12 bg-tertiary-container/10 rounded-xl flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-tertiary">fact_check</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">ATS Resume Checker</h3>
+<p class="text-on-surface-variant font-body-md">Score your resume against applicant tracking systems to ensure you never get filtered out prematurely.</p>
+</div>
+<!-- Feature Card 4 -->
+<div class="feature-card p-lg bg-surface-container-lowest border border-outline-variant/10 rounded-2xl transition-all duration-300">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary">dashboard_customize</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">Resume Templates</h3>
+<p class="text-on-surface-variant font-body-md">Choose from dozens of designer-crafted templates that are both beautiful and functionally superior.</p>
+</div>
+<!-- Feature Card 5 -->
+<div class="feature-card p-lg bg-surface-container-lowest border border-outline-variant/10 rounded-2xl transition-all duration-300">
+<div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-secondary">psychology</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">AI Career Assistant</h3>
+<p class="text-on-surface-variant font-body-md">Get 24/7 advice on interview preparation, salary negotiation, and career pathing from our specialized AI.</p>
+</div>
+<!-- Feature Card 6 -->
+<div class="feature-card p-lg bg-surface-container-lowest border border-outline-variant/10 rounded-2xl transition-all duration-300">
+<div class="w-12 h-12 bg-tertiary-container/10 rounded-xl flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-tertiary">picture_as_pdf</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">PDF Export</h3>
+<p class="text-on-surface-variant font-body-md">Export your documents in pixel-perfect PDF format, optimized for both human readers and digital scanners.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Template Preview Section -->
+<section class="py-xl bg-surface-container-low">
+<div class="container mx-auto px-md">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center mb-xl">
+<div class="order-2 lg:order-1">
+<img alt="Resume Template Gallery" class="w-full h-auto rounded-2xl shadow-2xl border-4 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4AL4g4A0CVkba9-EJMjp7kz-z-1Fun1KWOMC2Cr8bayLjGb0L72R373A48qXCBIfRmCrgYHvYnv1ryVPEiK5JuW3XYxRzRTOneFJ1Jvs-QlmvjEUxK2NA76beQRxZ6m2xcCjJyhYIkJEC5J39gcCDSVRxzWYXX_f-PaBI6IvT2E6CpySSnt_8LEzHovP5t7ytsT4vMUgyHYf_ulsmJI1yjP-Jm2M1LGaWDJLsVFHkeTotDBJU1YZXbnVJvQDQ4WfECZos09rheNsy"/>
+</div>
+<div class="order-1 lg:order-2 space-y-md">
+<h2 class="font-display-lg text-headline-lg leading-tight">Expertly Designed <br/><span class="text-primary">Templates for Every Industry</span></h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg">Whether you're a software engineer, a creative director, or a healthcare professional, we have a template that matches your professional tone.</p>
+<div class="grid grid-cols-2 gap-md">
+<div class="resume-preview-card p-sm bg-white rounded-xl shadow-sm border border-outline-variant/10">
+<div class="bg-surface-container h-32 rounded-lg mb-xs overflow-hidden">
+<div class="w-full h-full bg-slate-100 opacity-50 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl">article</span>
+</div>
+</div>
+<span class="font-label-md text-label-md block text-center">Classic</span>
+</div>
+<div class="resume-preview-card p-sm bg-white rounded-xl shadow-sm border border-outline-variant/10">
+<div class="bg-surface-container h-32 rounded-lg mb-xs overflow-hidden">
+<div class="w-full h-full bg-indigo-100 opacity-50 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-4xl">palette</span>
+</div>
+</div>
+<span class="font-label-md text-label-md block text-center">Creative</span>
+</div>
+<div class="resume-preview-card p-sm bg-white rounded-xl shadow-sm border border-outline-variant/10">
+<div class="bg-surface-container h-32 rounded-lg mb-xs overflow-hidden">
+<div class="w-full h-full bg-sky-100 opacity-50 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl">save_as</span>
+</div>
+</div>
+<span class="font-label-md text-label-md block text-center">Modern</span>
+</div>
+<div class="resume-preview-card p-sm bg-white rounded-xl shadow-sm border border-outline-variant/10">
+<div class="bg-surface-container h-32 rounded-lg mb-xs overflow-hidden">
+<div class="w-full h-full bg-slate-200 opacity-50 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface text-4xl">work</span>
+</div>
+</div>
+<span class="font-label-md text-label-md block text-center">Professional</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="py-xl">
+<div class="container mx-auto px-md">
+<div class="text-center mb-xl">
+<h2 class="font-display-lg text-headline-lg">How It Works</h2>
+<p class="text-on-surface-variant font-body-md">Get your dream job in four simple steps.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg relative">
+<!-- Connector Line (Desktop) -->
+<div class="hidden md:block absolute top-12 left-1/2 -translate-x-1/2 w-3/4 h-[2px] bg-outline-variant/20 -z-10"></div>
+<!-- Step 1 -->
+<div class="text-center space-y-md group">
+<div class="w-16 h-16 bg-white border-2 border-primary rounded-full flex items-center justify-center mx-auto text-primary font-display-lg text-headline-md group-hover:bg-primary group-hover:text-white transition-all shadow-md">1</div>
+<div>
+<h4 class="font-headline-md text-headline-md">Create Account</h4>
+<p class="text-on-surface-variant font-body-md mt-2">Sign up for free and choose your career goals.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="text-center space-y-md group">
+<div class="w-16 h-16 bg-white border-2 border-primary rounded-full flex items-center justify-center mx-auto text-primary font-display-lg text-headline-md group-hover:bg-primary group-hover:text-white transition-all shadow-md">2</div>
+<div>
+<h4 class="font-headline-md text-headline-md">Enter Information</h4>
+<p class="text-on-surface-variant font-body-md mt-2">Input your history or import your old resume file.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="text-center space-y-md group">
+<div class="w-16 h-16 bg-white border-2 border-primary rounded-full flex items-center justify-center mx-auto text-primary font-display-lg text-headline-md group-hover:bg-primary group-hover:text-white transition-all shadow-md">3</div>
+<div>
+<h4 class="font-headline-md text-headline-md">AI Generates</h4>
+<p class="text-on-surface-variant font-body-md mt-2">Our AI crafts a professional, tailored narrative for you.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="text-center space-y-md group">
+<div class="w-16 h-16 bg-white border-2 border-primary rounded-full flex items-center justify-center mx-auto text-primary font-display-lg text-headline-md group-hover:bg-primary group-hover:text-white transition-all shadow-md">4</div>
+<div>
+<h4 class="font-headline-md text-headline-md">Download PDF</h4>
+<p class="text-on-surface-variant font-body-md mt-2">Get your high-quality, ATS-ready resume file instantly.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="container mx-auto px-md">
+<div class="text-center mb-xl">
+<h2 class="font-display-lg text-headline-lg">Trusted by Top Professionals</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<div class="bg-white p-lg rounded-2xl shadow-sm border border-outline-variant/10 space-y-md italic text-on-surface-variant font-body-lg">
+                        "CareerCraft AI completely transformed my application process. I landed three interviews in the first week after updating my resume!"
+                        <div class="flex items-center gap-sm pt-md not-italic">
+<div class="w-12 h-12 rounded-full bg-primary/10 overflow-hidden" data-alt="Close-up professional headshot of a smiling young woman in a beige blazer, studio lighting, soft gray background, modern minimalist style, friendly and confident professional look." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAS6-idnVQ0GneaX2AtynGDneeupdpxcxvQvtbnTFhZiKodnT7xv0xRH_NoAwT80WWvtfoq8mMXkle9cgM1YxW8EHHZomGhFD8BU4aahWXpi2NnxcXauPBm2NYa-QoNuPBKlAf2Rvjiy9SZs9OohaOSvdlBcCNwTzW8GA1___-nxFhHQQEbTPT_bsU0vGXMEk5K2TkHuWJEdiGn_dIfRFVXSQy6fULUUl_AF29N5Ps47GneVK8YBZaYAb9zUCb_rLtbfCjGooUPZWO5')"></div>
+<div>
+<p class="font-headline-md text-label-md text-on-surface">Sarah Johnson</p>
+<p class="font-body-md text-label-sm">Product Manager</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-lg rounded-2xl shadow-sm border border-outline-variant/10 space-y-md italic text-on-surface-variant font-body-lg">
+                        "The AI cover letter generator is a game changer. It saved me hours of work and the letters sound exactly like me, just more polished."
+                        <div class="flex items-center gap-sm pt-md not-italic">
+<div class="w-12 h-12 rounded-full bg-primary/10 overflow-hidden" data-alt="Professional headshot of a middle-aged man with short dark hair and a light beard, wearing a crisp white shirt, clean professional photography, high-end corporate style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDO7KSKtLX3X2bzeI_c5Rdn7URza9YD3-B58qP-3KQjAu_Him21cn0A7rFjUlIg7mHmIc0cEP8ppSSuGnDpfSaTD4R2c7T9UCPughohxvqMANzmtUqIN0_A5KXXpglasmsAmtAZ5RffdRdNdW1PWV_-OrM0M5xOhmG6MqxHBkGgEyi44xg35pgviwgX0v2aH1F_fQVotPGai8jFANTn7P757RqotzVhX9z1WwTqyzzRe_3mGbmkJAj8CYkq31LkIxCpT8BS5msL6UKU')"></div>
+<div>
+<p class="font-headline-md text-label-md text-on-surface">Mark Davies</p>
+<p class="font-body-md text-label-sm">Marketing Director</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-lg rounded-2xl shadow-sm border border-outline-variant/10 space-y-md italic text-on-surface-variant font-body-lg">
+                        "I was skeptical of AI, but the ATS checker is incredibly accurate. I finally feel confident that my applications are actually being seen."
+                        <div class="flex items-center gap-sm pt-md not-italic">
+<div class="w-12 h-12 rounded-full bg-primary/10 overflow-hidden" data-alt="Portrait of a diverse woman in her late 20s with a modern professional look, bright airy workspace background with plants, high-quality lens blur, sophisticated SaaS aesthetics." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFBOsvdcRFoP1BXKi__nEYlEBz_x0YfAcnMK1EagMAC4urQ5O0fZUJhwdqfFNp1j1qFnk7pYbuYVF5SPGfmsM-LJY0CaSb7OzipQV8XJe4sHBgCX6zc_jkULblHkc4TQP-ECyFTXp-iLSaukVgtVxZ7IYCNV1eLSWhxxxxbaZGaprDfubAcVshcyzwdIFtmhuPNPvDx8Ycj_2qS96I6g-A3OuDZM6mxip4qnxrdh3aqhKhEPo2z8SOPGPVam5Dladb4dKXi0Y5YMX8')"></div>
+<div>
+<p class="font-headline-md text-label-md text-on-surface">Anita Chen</p>
+<p class="font-body-md text-label-sm">Senior Developer</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-xl">
+<div class="container mx-auto px-md max-w-3xl">
+<div class="text-center mb-xl">
+<h2 class="font-display-lg text-headline-lg">Frequently Asked Questions</h2>
+</div>
+<div class="space-y-md">
+<div class="accordion-item bg-white rounded-xl border border-outline-variant/20 shadow-sm overflow-hidden">
+<button class="w-full flex justify-between items-center p-md text-left font-headline-md text-on-surface hover:bg-surface-container-low transition-all" onclick="toggleAccordion(this)">
+<span>How does the AI write my resume?</span>
+<span class="material-symbols-outlined chevron-icon transition-transform">expand_more</span>
+</button>
+<div class="accordion-content px-md pb-md text-on-surface-variant font-body-md">
+                            We use advanced language models trained on millions of successful resumes and job descriptions. The AI analyzes your background and rephrases your experience to highlight your achievements using high-impact industry keywords.
+                        </div>
+</div>
+<div class="accordion-item bg-white rounded-xl border border-outline-variant/20 shadow-sm overflow-hidden">
+<button class="w-full flex justify-between items-center p-md text-left font-headline-md text-on-surface hover:bg-surface-container-low transition-all" onclick="toggleAccordion(this)">
+<span>Is the resume truly ATS-friendly?</span>
+<span class="material-symbols-outlined chevron-icon transition-transform">expand_more</span>
+</button>
+<div class="accordion-content px-md pb-md text-on-surface-variant font-body-md">
+                            Absolutely. Our templates and AI output are specifically designed to be readable by all major Applicant Tracking Systems (ATS), ensuring your resume doesn't get rejected for formatting errors.
+                        </div>
+</div>
+<div class="accordion-item bg-white rounded-xl border border-outline-variant/20 shadow-sm overflow-hidden">
+<button class="w-full flex justify-between items-center p-md text-left font-headline-md text-on-surface hover:bg-surface-container-low transition-all" onclick="toggleAccordion(this)">
+<span>Can I export my resume as a PDF?</span>
+<span class="material-symbols-outlined chevron-icon transition-transform">expand_more</span>
+</button>
+<div class="accordion-content px-md pb-md text-on-surface-variant font-body-md">
+                            Yes, all users can export their resumes in professional PDF format. We also support Microsoft Word exports for certain templates if you prefer manual editing.
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-xl">
+<div class="container mx-auto px-md">
+<div class="bg-gradient-to-br from-primary to-secondary rounded-[32px] p-xl text-center text-on-primary space-y-lg shadow-2xl relative overflow-hidden">
+<!-- Subtle background decoration -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-[100px] rounded-full -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-black/10 blur-[100px] rounded-full -ml-32 -mb-32"></div>
+<h2 class="font-display-lg text-display-lg relative z-10">Start Building Your Resume Today</h2>
+<p class="font-body-lg text-body-lg opacity-90 max-w-2xl mx-auto relative z-10">Join thousands of professionals who have used CareerCraft AI to level up their careers. Get started for free.</p>
+<div class="flex justify-center gap-md relative z-10">
+<button class="bg-white text-primary px-xl py-sm rounded-2xl font-headline-md shadow-xl hover:bg-surface-container-low transition-all active:scale-95">Get Started Now</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-dim border-t border-outline-variant/20 w-full py-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-md container-max mx-auto">
+<div class="space-y-md">
+<div class="flex items-center gap-2">
+<img alt="CareerCraft AI Logo" class="h-8 w-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAMbE1RgGyCdKHZU_dvPRFAas48FERg8nDayxzXShnjiPMymkCJPN8rh5ZM9HKonlHRhr2tOFSk5UrXV5SatKWJv2DJKiohsWl6ns7a-cjhMkj9k_VGEnw9fOV4oJMHOZHVgje3VRlXVVSU-ewgHcMGrbMjMBCXSHxm7om2vOyzbfKRQZzMRedAMRED58l2jcJHQV2JQhgTtV2EUhcpAbpmuLdrVlTbervHjTC-HNnCG51kLKUX47e1ilcnFbYTG3tvU2U_k1htlwy"/>
+<span class="font-display-lg text-headline-md text-on-surface">CareerCraft AI</span>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md">
+                    Elevating professional narratives with precision. The leading platform for AI-powered career document generation.
+                </p>
+<div class="flex gap-md">
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-headline-md text-label-md mb-md uppercase tracking-wider">Product</h4>
+<ul class="space-y-sm font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-secondary transition-colors" href="#">Resume Builder</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Cover Letter</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">ATS Checker</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Templates</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-label-md mb-md uppercase tracking-wider">Company</h4>
+<ul class="space-y-sm font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-secondary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Blog</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-label-md mb-md uppercase tracking-wider">Legal &amp; Support</h4>
+<ul class="space-y-sm font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-secondary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Status</a></li>
+</ul>
+</div>
+</div>
+<div class="container-max mx-auto px-md mt-xl pt-lg border-t border-outline-variant/10 text-center text-on-surface-variant font-body-md text-label-sm">
+            © 2024 CareerCraft AI. Elevating professional narratives with precision.
+        </div>
+</footer>
+<script>
+        function toggleAccordion(button) {
+            const item = button.closest('.accordion-item');
+            const isActive = item.classList.contains('active');
+            
+            // Close all items
+            document.querySelectorAll('.accordion-item').forEach(i => {
+                i.classList.remove('active');
+            });
+            
+            // Toggle clicked item
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
+        // Add sticky header scroll shadow
+        window.onscroll = function() {
+            const header = document.querySelector('header');
+            if (window.pageYOffset > 50) {
+                header.classList.add('shadow-md');
+                header.classList.add('bg-white');
+                header.classList.remove('bg-white/80');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('bg-white/80');
+            }
+        };
+    </script>
+</body></html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings | CareerCraft AI</title>
+<!-- Google Fonts: Geist & Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.cdnfonts.com/css/geist" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#0058be",
+                    "on-secondary-container": "#fffbff",
+                    "on-primary-container": "#fefcff",
+                    "primary-container": "#2170e4",
+                    "background": "#faf8ff",
+                    "on-primary-fixed-variant": "#004395",
+                    "on-surface": "#131b2e",
+                    "outline": "#727785",
+                    "surface-variant": "#dae2fd",
+                    "tertiary-fixed-dim": "#ffb786",
+                    "surface-tint": "#005ac2",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#23005c",
+                    "inverse-surface": "#283044",
+                    "surface-container": "#eaedff",
+                    "tertiary-container": "#b75b00",
+                    "secondary-fixed-dim": "#d0bcff",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#faf8ff",
+                    "tertiary": "#924700",
+                    "primary-fixed-dim": "#adc6ff",
+                    "surface-container-highest": "#dae2fd",
+                    "surface-container-high": "#e2e7ff",
+                    "tertiary-fixed": "#ffdcc6",
+                    "secondary-container": "#8455ef",
+                    "error": "#ba1a1a",
+                    "secondary": "#6b38d4",
+                    "on-error-container": "#93000a",
+                    "on-background": "#131b2e",
+                    "primary-fixed": "#d8e2ff",
+                    "surface": "#faf8ff",
+                    "outline-variant": "#c2c6d6",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed": "#001a42",
+                    "surface-container-low": "#f2f3ff",
+                    "on-tertiary-container": "#fffbff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "1rem",
+                    "xs": "0.5rem",
+                    "md": "1.5rem",
+                    "lg": "2rem",
+                    "gutter": "24px",
+                    "xl": "3rem",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Geist"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Geist"],
+                    "display-lg": ["Geist"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Geist"],
+                    "headline-lg": ["Geist"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-headline-md, .font-headline-lg, .font-display-lg, .font-label-md { font-family: 'Geist', sans-serif; }
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .scale-98-active:active { transform: scale(0.98); }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-card {
+            background: #ffffff;
+            border: 1px solid #F1F5F9;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+        }
+        .bento-card:hover {
+            box-shadow: 0px 15px 40px rgba(0,0,0,0.06);
+        }
+        .brand-gradient {
+            background: linear-gradient(135deg, #0058be 0%, #6b38d4 100%);
+        }
+        .ai-glow {
+            box-shadow: 0 0 20px rgba(107, 56, 212, 0.15);
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #0058be !important;
+            box-shadow: 0 0 0 2px rgba(0, 88, 190, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar (Shared Component) -->
+<header class="sticky top-0 z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 shadow-sm">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-16">
+<div class="flex items-center gap-md">
+<span class="text-headline-md font-headline-md font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">CareerCraft AI</span>
+<nav class="hidden md:flex gap-md ml-xl">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Workspace</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Templates</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Analysis</a>
+</nav>
+</div>
+<div class="flex items-center gap-sm">
+<button class="px-md py-xs bg-primary text-on-primary font-label-md rounded-xl hover:opacity-90 transition-all cursor-pointer">Upgrade</button>
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined">help</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden ml-xs border border-outline-variant/20">
+<img class="w-full h-full object-cover" data-alt="A professional studio headshot of a diverse tech worker, smiling confidently, soft cinematic lighting with a shallow depth of field, minimalist modern office background in soft blues and whites, premium SaaS aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1vgk9NlpR31C9wY08de1rlGpxMNyEIJNu1-iiCAxxD_aIIz96gAEOmtv1mxg_4aArOIAp-eSYlhklfAmdAMbFBiHyNBDjqdqhFE7IFNPayKFX2BsVRaOs6da9qXSO-7qDiqGbZMM885YAqaHfze6QaRbbVj0jgG9PDGmTGzxvV3BK_OfvC9b58QXz44UCRbWYMkOitB_dqeU7V3aucx_bbBKHUyQYyFIwHrm4UMfyqrlVbU1LPqKB7Ztsa05cXdLKYfYtpzqvx76e"/>
+</div>
+</div>
+</div>
+</header>
+<div class="flex min-h-screen max-w-container-max mx-auto px-gutter gap-lg pt-sm">
+<!-- SideNavBar (Shared Component) -->
+<aside class="hidden md:flex flex-col h-[calc(100vh-80px)] w-64 flex-shrink-0 sticky top-20 py-sm gap-base">
+<div class="px-xs pb-md">
+<h2 class="text-headline-sm font-headline-sm text-on-surface font-semibold">Settings</h2>
+<p class="text-label-md text-on-surface-variant">Manage your preferences</p>
+</div>
+<nav class="flex flex-col gap-xs">
+<a class="text-on-surface-variant hover:bg-surface-variant/50 rounded-xl flex items-center px-4 py-3 gap-sm transition-colors scale-98-active" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md">Profile</span>
+</a>
+<a class="bg-primary-container text-on-primary-container font-semibold rounded-xl flex items-center px-4 py-3 gap-sm scale-98-active" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">palette</span>
+<span class="font-label-md">Appearance</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant/50 rounded-xl flex items-center px-4 py-3 gap-sm transition-colors scale-98-active" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span class="font-label-md">Notifications</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant/50 rounded-xl flex items-center px-4 py-3 gap-sm transition-colors scale-98-active" href="#">
+<span class="material-symbols-outlined">shield</span>
+<span class="font-label-md">Security</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant/50 rounded-xl flex items-center px-4 py-3 gap-sm transition-colors scale-98-active" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-label-md">Billing</span>
+</a>
+</nav>
+<div class="mt-auto pt-md border-t border-outline-variant/10">
+<a class="text-primary font-label-md px-4 py-3 hover:underline" href="#">Support Center</a>
+<button class="text-on-surface-variant hover:bg-error-container hover:text-on-error-container rounded-xl flex items-center w-full px-4 py-3 gap-sm transition-colors mt-xs">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-md">Sign Out</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-grow pb-xl">
+<header class="mb-lg pt-sm">
+<div class="flex items-center gap-sm mb-xs">
+<span class="material-symbols-outlined text-primary text-lg">auto_awesome</span>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-secondary">Advanced Customization</span>
+</div>
+<h1 class="text-headline-lg font-headline-lg text-on-surface">Experience &amp; Interface</h1>
+<p class="text-body-md text-on-surface-variant">Configure how CareerCraft AI looks and feels for your professional workflow.</p>
+</header>
+<div class="grid grid-cols-1 @container lg:grid-cols-12 gap-gutter">
+<!-- Appearance Card -->
+<section class="lg:col-span-8 bento-card rounded-2xl p-lg">
+<div class="flex items-start justify-between mb-md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary">palette</span>
+<h3 class="text-headline-sm font-headline-md">Appearance</h3>
+</div>
+</div>
+<div class="space-y-lg">
+<div>
+<label class="text-label-md font-label-md mb-xs block">Interface Theme</label>
+<div class="grid grid-cols-3 gap-sm">
+<button class="p-sm border-2 border-primary bg-surface rounded-xl text-center group transition-all">
+<div class="h-16 bg-white border border-outline-variant rounded-lg mb-xs shadow-inner"></div>
+<span class="text-label-md font-semibold">Light</span>
+</button>
+<button class="p-sm border border-outline-variant bg-surface rounded-xl text-center group hover:border-primary/50 transition-all">
+<div class="h-16 bg-inverse-surface border border-outline-variant rounded-lg mb-xs shadow-inner"></div>
+<span class="text-label-md">Dark</span>
+</button>
+<button class="p-sm border border-outline-variant bg-surface rounded-xl text-center group hover:border-primary/50 transition-all">
+<div class="h-16 bg-gradient-to-br from-white to-inverse-surface border border-outline-variant rounded-lg mb-xs shadow-inner"></div>
+<span class="text-label-md">System</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-lg">
+<div class="flex-1">
+<label class="text-label-md font-label-md mb-xs block">Font Scaling</label>
+<input class="w-full h-2 bg-surface-container rounded-lg appearance-none cursor-pointer accent-primary" max="20" min="12" step="1" type="range" value="16"/>
+<div class="flex justify-between text-label-sm text-outline mt-xs">
+<span>Compact</span>
+<span>Standard</span>
+<span>Large</span>
+</div>
+</div>
+<div class="flex-1">
+<label class="text-label-md font-label-md mb-xs block">Brand Accent</label>
+<div class="flex gap-xs">
+<button class="w-8 h-8 rounded-full bg-primary border-2 border-white ring-2 ring-primary"></button>
+<button class="w-8 h-8 rounded-full bg-secondary border-2 border-white hover:ring-2 hover:ring-secondary/50"></button>
+<button class="w-8 h-8 rounded-full bg-tertiary border-2 border-white hover:ring-2 hover:ring-tertiary/50"></button>
+<button class="w-8 h-8 rounded-full bg-emerald-500 border-2 border-white hover:ring-2 hover:ring-emerald-500/50"></button>
+<button class="w-8 h-8 rounded-full bg-rose-500 border-2 border-white hover:ring-2 hover:ring-rose-500/50"></button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Language Card -->
+<section class="lg:col-span-4 bento-card rounded-2xl p-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-sm mb-md">
+<span class="material-symbols-outlined text-primary">translate</span>
+<h3 class="text-headline-sm font-headline-md">Language</h3>
+</div>
+<p class="text-body-md text-on-surface-variant mb-md">Choose your preferred language for the CareerCraft dashboard and AI prompts.</p>
+</div>
+<select class="w-full p-sm bg-surface border border-outline-variant rounded-xl text-on-surface font-body-md appearance-none">
+<option value="en">English (US)</option>
+<option value="es">Español</option>
+<option value="fr">Français</option>
+<option value="de">Deutsch</option>
+<option value="jp">日本語</option>
+</select>
+</section>
+<!-- Notifications Card -->
+<section class="lg:col-span-6 bento-card rounded-2xl p-lg">
+<div class="flex items-center gap-sm mb-md">
+<span class="material-symbols-outlined text-primary">notifications_active</span>
+<h3 class="text-headline-sm font-headline-md">Notifications</h3>
+</div>
+<div class="space-y-sm">
+<div class="flex items-center justify-between p-sm hover:bg-surface-container-low rounded-xl transition-colors">
+<div>
+<span class="font-label-md block">Email Alerts</span>
+<span class="text-label-sm text-on-surface-variant">Analysis completion and resume tips</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-sm hover:bg-surface-container-low rounded-xl transition-colors">
+<div>
+<span class="font-label-md block">Browser Notifications</span>
+<span class="text-label-sm text-on-surface-variant">Real-time collaboration and reminders</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-sm hover:bg-surface-container-low rounded-xl transition-colors">
+<div>
+<span class="font-label-md block">Marketing Updates</span>
+<span class="text-label-sm text-on-surface-variant">Occasional news about product features</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Privacy Card -->
+<section class="lg:col-span-6 bento-card rounded-2xl p-lg">
+<div class="flex items-center gap-sm mb-md">
+<span class="material-symbols-outlined text-primary">visibility</span>
+<h3 class="text-headline-sm font-headline-md">Privacy</h3>
+</div>
+<div class="space-y-sm">
+<div class="flex items-center justify-between p-sm hover:bg-surface-container-low rounded-xl transition-colors">
+<div>
+<span class="font-label-md block">Profile Visibility</span>
+<span class="text-label-sm text-on-surface-variant">Allow recruiters to find your public page</span>
+</div>
+<select class="p-xs bg-surface border border-outline-variant rounded-lg text-label-sm">
+<option>Public</option>
+<option>Recruiters Only</option>
+<option>Private</option>
+</select>
+</div>
+<div class="flex items-center justify-between p-sm hover:bg-surface-container-low rounded-xl transition-colors">
+<div>
+<span class="font-label-md block">AI Data Training</span>
+<span class="text-label-sm text-on-surface-variant">Use anonymized data to improve AI models</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-sm hover:bg-surface-container-low rounded-xl transition-colors">
+<div>
+<span class="font-label-md block">Search Indexing</span>
+<span class="text-label-sm text-on-surface-variant">List your profile on Google and Bing</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Connected Accounts -->
+<section class="lg:col-span-5 bento-card rounded-2xl p-lg">
+<div class="flex items-center gap-sm mb-md">
+<span class="material-symbols-outlined text-primary">link</span>
+<h3 class="text-headline-sm font-headline-md">Connected Accounts</h3>
+</div>
+<div class="space-y-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 flex items-center justify-center bg-[#F1F5F9] rounded-lg">
+<span class="material-symbols-outlined text-[#1877F2]">login</span>
+</div>
+<div>
+<span class="font-label-md block">Google</span>
+<span class="text-label-sm text-emerald-600 font-semibold">Connected</span>
+</div>
+</div>
+<button class="text-label-sm font-bold text-error hover:underline scale-98-active">Disconnect</button>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 flex items-center justify-center bg-[#F1F5F9] rounded-lg">
+<span class="material-symbols-outlined text-[#0A66C2]">person</span>
+</div>
+<div>
+<span class="font-label-md block">LinkedIn</span>
+<span class="text-label-sm text-emerald-600 font-semibold">Connected</span>
+</div>
+</div>
+<button class="text-label-sm font-bold text-error hover:underline scale-98-active">Disconnect</button>
+</div>
+<div class="flex items-center justify-between opacity-60">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 flex items-center justify-center bg-[#F1F5F9] rounded-lg">
+<span class="material-symbols-outlined text-[#333]">terminal</span>
+</div>
+<div>
+<span class="font-label-md block">GitHub</span>
+<span class="text-label-sm text-on-surface-variant">Not connected</span>
+</div>
+</div>
+<button class="text-label-sm font-bold text-primary hover:underline scale-98-active">Link Account</button>
+</div>
+</div>
+</section>
+<!-- Security & API Keys -->
+<section class="lg:col-span-7 bento-card rounded-2xl p-lg">
+<div class="flex items-center gap-sm mb-md">
+<span class="material-symbols-outlined text-primary">security</span>
+<h3 class="text-headline-sm font-headline-md">Security &amp; API</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div>
+<h4 class="text-label-sm font-bold uppercase tracking-wider text-outline mb-sm">Access Control</h4>
+<div class="space-y-sm">
+<button class="w-full text-left px-sm py-xs border border-outline-variant rounded-xl flex items-center justify-between hover:bg-surface-container-low transition-all scale-98-active">
+<span class="text-label-md">Change Password</span>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</button>
+<div class="flex items-center justify-between px-sm py-xs border border-outline-variant rounded-xl">
+<span class="text-label-md">2FA Status</span>
+<span class="px-xs py-[2px] bg-emerald-100 text-emerald-700 text-[10px] rounded uppercase font-bold">Enabled</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="text-label-sm font-bold uppercase tracking-wider text-outline mb-sm">API Management</h4>
+<div class="space-y-sm">
+<div class="p-sm bg-surface-container-low rounded-xl border border-dashed border-outline-variant">
+<div class="flex items-center justify-between mb-xs">
+<span class="text-label-sm font-mono text-outline">sk_live_...4f21</span>
+<button class="material-symbols-outlined text-error text-sm">delete</button>
+</div>
+<button class="w-full py-xs bg-primary/10 text-primary rounded-lg text-label-sm font-bold hover:bg-primary/20 transition-all">Generate New Key</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Danger Zone -->
+<section class="lg:col-span-12 border-2 border-error/20 bg-error/5 rounded-2xl p-lg">
+<div class="flex flex-col md:flex-row items-center justify-between gap-md">
+<div>
+<h3 class="text-headline-sm font-headline-md text-error">Danger Zone</h3>
+<p class="text-body-md text-on-surface-variant max-w-2xl">Deleting your account will permanently remove all your resumes, AI analyses, and personal data. This action is irreversible.</p>
+</div>
+<button class="px-lg py-sm bg-error text-on-error rounded-xl font-label-md hover:opacity-90 transition-all scale-98-active whitespace-nowrap shadow-md">Delete Account</button>
+</div>
+</section>
+</div>
+<!-- Sticky Footer CTA -->
+<div class="sticky bottom-gutter mt-lg">
+<div class="glass ai-glow rounded-2xl p-sm px-md flex items-center justify-between max-w-lg mx-auto border border-outline-variant/30">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">save</span>
+<span class="text-label-md font-medium">Unsaved changes detected</span>
+</div>
+<div class="flex gap-sm">
+<button class="px-md py-xs text-on-surface-variant font-label-md hover:bg-surface-variant/50 rounded-lg transition-all">Discard</button>
+<button class="px-md py-xs brand-gradient text-on-primary font-label-md rounded-lg shadow-lg hover:shadow-xl transition-all scale-98-active">Save Settings</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Mobile Navigation Shell (Conditional logic applied: Navigation shell exists for primary settings) -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 glass border-t border-outline-variant/10 px-md py-xs flex justify-around items-center z-50">
+<button class="flex flex-col items-center gap-xs p-xs text-on-surface-variant">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-label-md">Home</span>
+</button>
+<button class="flex flex-col items-center gap-xs p-xs text-on-surface-variant">
+<span class="material-symbols-outlined">description</span>
+<span class="text-[10px] font-label-md">Resumes</span>
+</button>
+<div class="w-12 h-12 brand-gradient rounded-full flex items-center justify-center -mt-8 shadow-xl">
+<span class="material-symbols-outlined text-white">auto_awesome</span>
+</div>
+<button class="flex flex-col items-center gap-xs p-xs text-primary font-bold">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="text-[10px] font-label-md">Settings</span>
+</button>
+<button class="flex flex-col items-center gap-xs p-xs text-on-surface-variant">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-label-md">Profile</span>
+</button>
+</div>
+<script>
+        // Simple Micro-interaction for buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                if (this.innerText === 'Save Settings') {
+                    this.innerHTML = '<span class="material-symbols-outlined animate-spin mr-2">refresh</span> Saving...';
+                    setTimeout(() => {
+                        this.innerHTML = 'Save Settings';
+                        alert('Settings saved successfully!');
+                    }, 1500);
+                }
+            });
+        });
+
+        // Theme Switcher Demo Logic
+        document.querySelectorAll('button').forEach(btn => {
+            if (btn.innerText === 'Dark') {
+                btn.addEventListener('click', () => document.documentElement.classList.add('dark'));
+            }
+            if (btn.innerText === 'Light') {
+                btn.addEventListener('click', () => document.documentElement.classList.remove('dark'));
+            }
+        });
+    </script>
+</body></html>

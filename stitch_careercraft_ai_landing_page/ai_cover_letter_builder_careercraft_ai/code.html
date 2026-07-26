@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CareerAI | AI Cover Letter Builder</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:wght@100..900&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#004395",
+                        "surface-dim": "#d2d9f4",
+                        "primary-fixed-dim": "#adc6ff",
+                        "on-tertiary-fixed": "#311400",
+                        "surface-container-high": "#e2e7ff",
+                        "surface-tint": "#005ac2",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#dae2fd",
+                        "surface-variant": "#dae2fd",
+                        "secondary": "#6b38d4",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#d0bcff",
+                        "primary": "#0058be",
+                        "tertiary-container": "#b75b00",
+                        "background": "#faf8ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#001a42",
+                        "surface-container-low": "#f2f3ff",
+                        "on-tertiary-container": "#fffbff",
+                        "on-secondary-fixed-variant": "#5516be",
+                        "on-primary-container": "#fefcff",
+                        "surface-container": "#eaedff",
+                        "outline-variant": "#c2c6d6",
+                        "outline": "#727785",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#eef0ff",
+                        "tertiary": "#924700",
+                        "secondary-container": "#8455ef",
+                        "on-surface": "#131b2e",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ffdcc6",
+                        "on-secondary-container": "#fffbff",
+                        "inverse-primary": "#adc6ff",
+                        "tertiary-fixed-dim": "#ffb786",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "on-surface-variant": "#424754",
+                        "on-background": "#131b2e",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#2170e4",
+                        "primary-fixed": "#d8e2ff",
+                        "inverse-surface": "#283044",
+                        "secondary-fixed": "#e9ddff",
+                        "surface-bright": "#faf8ff",
+                        "surface": "#faf8ff",
+                        "on-secondary-fixed": "#23005c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "8px",
+                        "lg": "12px",
+                        "xl": "16px",
+                        "2xl": "24px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "2rem",
+                        "container-max": "1280px",
+                        "xs": "0.5rem",
+                        "gutter": "24px",
+                        "sm": "1rem",
+                        "base": "4px",
+                        "xl": "3rem",
+                        "margin-mobile": "16px",
+                        "md": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Geist"],
+                        "label-sm": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "display-lg": ["Geist"],
+                        "label-md": ["Geist"],
+                        "headline-md": ["Geist"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: rgba(250, 248, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(194, 198, 214, 0.1);
+        }
+        .ai-gradient {
+            background: linear-gradient(135deg, #0058be 0%, #6b38d4 100%);
+        }
+        .document-shadow {
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.04);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d2d9f4;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 glass-header h-16 flex justify-between items-center px-lg shadow-sm">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold text-primary">CareerAI</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Dashboard</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Resumes</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="#">Cover Letters</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Job Tracker</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center gap-2 px-4 py-2 bg-primary-container text-on-primary-container font-label-md text-label-md rounded-full transition-transform active:scale-95">
+                Upgrade Pro
+            </button>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer">settings</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden border border-outline-variant/20">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a diverse male executive in a minimalist studio setting. Soft, directional light illuminates his features against a clean, cool gray background. The style is high-end corporate photography, focusing on a confident and approachable expression, emphasizing professional clarity and premium SaaS aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_UCpKIQbR2aq6kCy22R8NYPFKQNL59rYOex3U_q0TTNBGN4FnHlnam63akjRsC7H-jqqY95hlb1K_Z0A5Yw9QIWwzrDfuIBv7U2fWw26RBme-PxU87SiB3Throx4e3U6rmxkf1IC6PkW85zooEL9Aeq2CefHGWW9qNa2xQvX-rq7-cmRl4gxi4hqTTLYfkVBMHGRhVivATaLiJl_ZjbK-lsMzVGXN4SUpGyuk7B_R1ayyQfi_YYUxsx3mKc5IEDq_opvPg7aUebhh"/>
+</div>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="hidden md:flex h-[calc(100vh-4rem)] w-64 fixed left-0 top-16 bg-surface flex-col py-md gap-2 border-r border-outline-variant/10">
+<div class="px-4 mb-6">
+<div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-xl">
+<div class="w-10 h-10 rounded-lg ai-gradient flex items-center justify-center text-white">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-bold text-primary">AI Writing Assistant</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-wider">Precision Mode Active</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<div class="bg-primary-container text-on-primary-container rounded-xl mx-2 px-4 py-3 flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-label-md text-label-md">Generator</span>
+</div>
+<div class="text-on-surface-variant hover:bg-surface-container-high rounded-xl mx-2 px-4 py-3 flex items-center gap-3 cursor-pointer transition-all">
+<span class="material-symbols-outlined">description</span>
+<span class="font-label-md text-label-md">Templates</span>
+</div>
+<div class="text-on-surface-variant hover:bg-surface-container-high rounded-xl mx-2 px-4 py-3 flex items-center gap-3 cursor-pointer transition-all">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-md text-label-md">History</span>
+</div>
+<div class="text-on-surface-variant hover:bg-surface-container-high rounded-xl mx-2 px-4 py-3 flex items-center gap-3 cursor-pointer transition-all">
+<span class="material-symbols-outlined">psychology</span>
+<span class="font-label-md text-label-md">Skills Bank</span>
+</div>
+<div class="text-on-surface-variant hover:bg-surface-container-high rounded-xl mx-2 px-4 py-3 flex items-center gap-3 cursor-pointer transition-all">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</div>
+</nav>
+<div class="mt-auto px-2 border-t border-outline-variant/10 pt-4">
+<div class="text-on-surface-variant hover:bg-surface-container-high rounded-xl px-4 py-3 flex items-center gap-3 cursor-pointer transition-all">
+<span class="material-symbols-outlined">help</span>
+<span class="font-label-md text-label-md">Help Center</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="pt-16 md:pl-64 h-screen bg-surface-container-low overflow-hidden">
+<div class="flex h-full">
+<!-- Left Pane: Input Form -->
+<section class="w-full md:w-[450px] bg-surface flex flex-col border-r border-outline-variant/10 h-full overflow-y-auto custom-scrollbar">
+<div class="p-lg">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Cover Letter Details</h2>
+</div>
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1">Company Name</label>
+<input class="w-full px-4 py-3 bg-surface-container-lowest border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-outline/50 font-body-md" placeholder="e.g. Innovate Tech Corp" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1">Job Title</label>
+<input class="w-full px-4 py-3 bg-surface-container-lowest border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-outline/50 font-body-md" placeholder="e.g. Senior UX Designer" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1">Years of Exp.</label>
+<select class="w-full px-4 py-3 bg-surface-container-lowest border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-md">
+<option>Select</option>
+<option>0-2 years</option>
+<option>3-5 years</option>
+<option>5-10 years</option>
+<option>10+ years</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1 flex justify-between">
+                                Key Skills 
+                                <span class="text-[10px] uppercase font-bold text-primary">AI suggestions available</span>
+</label>
+<div class="flex flex-wrap gap-2 p-3 bg-surface-container-lowest border border-outline-variant rounded-lg min-h-[80px]">
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold flex items-center gap-1">
+                                    UI/UX Design <span class="material-symbols-outlined text-xs cursor-pointer">close</span>
+</span>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold flex items-center gap-1">
+                                    Figma <span class="material-symbols-outlined text-xs cursor-pointer">close</span>
+</span>
+<input class="bg-transparent border-none focus:ring-0 text-xs w-24" placeholder="Add skill..." type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1">Job Description</label>
+<textarea class="w-full px-4 py-3 bg-surface-container-lowest border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-outline/50 font-body-md resize-none" placeholder="Paste the job requirements here for AI to analyze..." rows="8"></textarea>
+</div>
+<button class="w-full ai-gradient text-white py-4 rounded-lg font-headline-md text-headline-md flex items-center justify-center gap-3 shadow-lg shadow-primary/20 hover:scale-[1.01] active:scale-95 transition-all" onclick="generateEffect()" type="button">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                            Generate Cover Letter
+                        </button>
+</form>
+</div>
+</section>
+<!-- Right Pane: AI Workspace -->
+<section class="flex-1 h-full flex flex-col relative">
+<!-- Workspace Header -->
+<div class="p-lg flex justify-between items-center border-b border-outline-variant/10 bg-surface/50 backdrop-blur-sm sticky top-0 z-10">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Generated Cover Letter</h2>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-4 py-2 border border-outline-variant text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+                            Copy to Clipboard
+                        </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-on-surface text-surface rounded-lg font-label-md text-label-md hover:opacity-90 transition-all">
+<span class="material-symbols-outlined text-sm">download</span>
+                            Download PDF
+                        </button>
+</div>
+</div>
+<!-- Document Preview Area -->
+<div class="flex-1 overflow-y-auto p-lg bg-surface-container-low flex justify-center custom-scrollbar">
+<div class="w-full max-w-[800px] h-fit min-h-[1000px] bg-white rounded-2xl document-shadow p-xl font-headline-lg text-on-surface relative" id="letter-document">
+<!-- AI Sparkle Chip -->
+<div class="absolute top-6 right-8 px-4 py-1.5 rounded-full glass-header border border-primary/20 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="text-[10px] font-bold text-primary uppercase tracking-tighter">AI Optimized for Impact</span>
+</div>
+<div class="space-y-6">
+<!-- Contact Info -->
+<div class="border-b border-outline-variant/10 pb-8">
+<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Alex Rivera</h1>
+<p class="text-on-surface-variant text-label-md">alex.rivera@example.com  •  555-0123  •  San Francisco, CA</p>
+</div>
+<!-- Date & Salutation -->
+<div class="pt-4">
+<p class="mb-8 text-on-surface-variant">October 24, 2023</p>
+<p class="font-bold mb-6">Dear Hiring Manager at <span class="text-primary">[Company Name]</span>,</p>
+</div>
+<!-- Letter Body (Editable) -->
+<div class="space-y-6 text-on-surface leading-relaxed outline-none cursor-text font-body-lg" contenteditable="true">
+<p>
+                                    I am writing to express my enthusiastic interest in the <span class="font-bold text-primary">[Job Title]</span> position. With over <span class="font-bold">[Years of Experience]</span> years of experience in the technology sector, I have developed a deep proficiency in <span class="font-bold text-secondary">UI/UX Design and Figma</span>, which aligns perfectly with your team's mission to revolutionize digital interaction.
+                                </p>
+<p>
+                                    In my previous role at a leading SaaS platform, I spearheaded a design overhaul that increased user engagement by 40%. My approach combines rigorous analytical thinking with creative problem-solving, ensuring that every pixel serves a purpose and every interaction is intuitive. I noticed that your recent job description emphasizes a need for "precision-led design systems"—a challenge I am uniquely equipped to handle.
+                                </p>
+<p>
+                                    Your company's commitment to innovation and professional growth is truly inspiring. I am confident that my technical skills, combined with my passion for creating world-class user experiences, make me an ideal candidate for your team.
+                                </p>
+<p>
+                                    I would welcome the opportunity to discuss how my background and skills can contribute to the continued success of <span class="font-bold text-primary">[Company Name]</span>. Thank you for your time and consideration.
+                                </p>
+</div>
+<!-- Sign off -->
+<div class="pt-8">
+<p>Sincerely,</p>
+<p class="font-headline-md mt-4 text-primary italic">Alex Rivera</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Micro-interaction Script -->
+<script>
+        function generateEffect() {
+            const doc = document.getElementById('letter-document');
+            doc.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            doc.style.opacity = '0.5';
+            doc.style.transform = 'scale(0.99)';
+            
+            setTimeout(() => {
+                doc.style.opacity = '1';
+                doc.style.transform = 'scale(1)';
+                // Here we would normally trigger the AI stream
+            }, 600);
+        }
+
+        // Simple tag removal simulation
+        document.querySelectorAll('.material-symbols-outlined.text-xs.cursor-pointer').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.parentElement.remove();
+            });
+        });
+    </script>
+</body></html>

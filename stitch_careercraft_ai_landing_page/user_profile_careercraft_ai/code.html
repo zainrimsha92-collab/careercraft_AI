@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile &amp; Settings | CareerCraft AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#723600",
+                    "secondary-container": "#8455ef",
+                    "surface": "#faf8ff",
+                    "tertiary-fixed": "#ffdcc6",
+                    "on-secondary-fixed-variant": "#5516be",
+                    "surface-container": "#eaedff",
+                    "on-background": "#131b2e",
+                    "surface-variant": "#dae2fd",
+                    "primary-fixed": "#d8e2ff",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#131b2e",
+                    "inverse-on-surface": "#eef0ff",
+                    "surface-container-low": "#f2f3ff",
+                    "on-tertiary-fixed": "#311400",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#e2e7ff",
+                    "on-secondary-container": "#fffbff",
+                    "on-primary-fixed-variant": "#004395",
+                    "on-error": "#ffffff",
+                    "tertiary": "#924700",
+                    "on-primary-container": "#fefcff",
+                    "outline-variant": "#c2c6d6",
+                    "secondary": "#6b38d4",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#d2d9f4",
+                    "primary": "#0058be",
+                    "inverse-surface": "#283044",
+                    "background": "#faf8ff",
+                    "secondary-fixed-dim": "#d0bcff",
+                    "on-tertiary-container": "#fffbff",
+                    "surface-tint": "#005ac2",
+                    "on-secondary-fixed": "#23005c",
+                    "on-primary-fixed": "#001a42",
+                    "tertiary-fixed-dim": "#ffb786",
+                    "outline": "#727785",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-primary": "#adc6ff",
+                    "surface-bright": "#faf8ff",
+                    "secondary-fixed": "#e9ddff",
+                    "primary-container": "#2170e4",
+                    "tertiary-container": "#b75b00",
+                    "on-surface-variant": "#424754",
+                    "surface-container-highest": "#dae2fd"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "lg": "2rem",
+                    "xs": "0.5rem",
+                    "md": "1.5rem",
+                    "xl": "3rem",
+                    "container-max": "1280px",
+                    "base": "4px",
+                    "sm": "1rem"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Geist"],
+                    "headline-lg": ["Geist"],
+                    "headline-md": ["Geist"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Geist"],
+                    "label-md": ["Geist"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #faf8ff;
+            color: #131b2e;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .card-shadow {
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.04);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-bg {
+            background-color: #e9ddff;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- Sidebar Navigation -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-surface border-r border-outline-variant flex flex-col py-6 px-4 z-50">
+<div class="mb-10 px-4">
+<h1 class="font-headline-md text-headline-md font-bold text-primary">CareerCraft AI</h1>
+<p class="font-label-md text-label-md text-on-surface-variant opacity-70">Premium Tier</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="font-label-md">Resume Builder</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">psychology</span>
+<span class="font-label-md">AI Interview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">moving</span>
+<span class="font-label-md">Career Roadmap</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-primary font-bold bg-secondary-fixed rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md">Settings</span>
+</a>
+</nav>
+<div class="mt-auto space-y-2 pt-6 border-t border-outline-variant/30">
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-label-md shadow-sm hover:opacity-90 transition-opacity">Upgrade to Pro</button>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-label-md">Help Center</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-error transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-md">Sign Out</span>
+</a>
+</div>
+</aside>
+<!-- Top Navigation -->
+<header class="sticky top-0 w-full z-40 glass-effect border-b border-outline-variant/30 flex justify-between items-center h-16 px-8 ml-64 max-w-[calc(100%-16rem)]">
+<div class="flex items-center gap-8">
+<nav class="flex gap-6">
+<a class="font-label-md text-on-surface-variant hover:text-primary transition-all" href="#">Analytics</a>
+<a class="font-label-md text-on-surface-variant hover:text-primary transition-all" href="#">Templates</a>
+<a class="font-label-md text-on-surface-variant hover:text-primary transition-all" href="#">Resources</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="px-4 py-2 bg-surface-container-high text-primary rounded-lg font-label-md hover:bg-surface-variant transition-all">Feedback</button>
+<div class="h-8 w-8 rounded-full overflow-hidden border border-outline-variant bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A professional studio portrait of a modern software professional with a friendly smile, high-end commercial photography style, soft directional lighting, against a clean neutral grey background, crisp details and shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1s9fWWGed0v44DiXl2UhdBHomHuuaK52EIdwdP5_2n0P7l4AaJHv-ItuBam-XoWqTxQQ1e2VCl2UUlxki1oZtK5zm0bObz5ueaVc3ZnfDPHOt289_ikdsQ2vZhi2O8ZTNc7JInoYrmJHu_H-EqOr32zxtMpRfYEI5zVC27KFHV4hzl_2Wzc0WoBMT_60XpaoyC88_yXvt2T2tIpx9DgVH1SWFBf994CoqCkLc84bC9E89k5nxZwAltSvbxOlWSJ0PQ5-Oro5WMZYh"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-64 p-8 min-h-screen bg-background">
+<div class="max-w-6xl mx-auto space-y-8">
+<!-- Profile Header Section -->
+<section class="bg-surface-container-lowest rounded-2xl p-8 card-shadow flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+<div class="relative group">
+<div class="w-32 h-32 rounded-full overflow-hidden border-4 border-surface shadow-lg">
+<img class="w-full h-full object-cover" data-alt="Close up professional headshot of a person with a warm smile, professional attire, soft cinematic lighting, neutral high-end studio background, sharp focus on eyes, ultra-high definition, 8k resolution, modern professional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCItW6R4QDC1nWmIpk34kOz2r9x02bYyMMkqfUyI7BNj-keP3qNb2ofNvle24CToqb4s3ODaznDX4WTt2lpDrhQvrqXfy_Ch_815Wo9ELE6CVKj1v4BrjNqQ4JD9J24EiTSoEGrF_Fz8K46XGhN7F9fuun-2IKdzEyiWnOQEJyXnr458QbLTBTXBdIOGXN03eLMB-UID82PxAz9QsKrrhyIZMsujJdvI2AAEhP6DWnqHS51urpIJxls5dG92_HUeQIFZu-Bw7qWY-jq"/>
+</div>
+<button class="absolute bottom-0 right-0 bg-primary text-on-primary p-2 rounded-full shadow-lg hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+</div>
+<div class="text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Alex Rivera</h2>
+<p class="font-body-md text-on-surface-variant mb-4">Senior UX Designer • San Francisco, CA</p>
+<div class="flex gap-3 justify-center md:justify-start">
+<span class="px-3 py-1 bg-secondary-container/10 text-secondary border border-secondary/20 rounded-full font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                            Premium Member
+                        </span>
+<span class="px-3 py-1 bg-green-100 text-green-700 border border-green-200 rounded-full font-label-sm">Profile 92% Complete</span>
+</div>
+</div>
+<div class="md:ml-auto flex gap-3">
+<button class="px-6 py-3 bg-primary text-on-primary rounded-xl font-label-md shadow-md hover:shadow-lg transition-all">Update Profile</button>
+<button class="px-6 py-3 bg-surface-container-high text-on-surface-variant border border-outline-variant/30 rounded-xl font-label-md hover:bg-surface-variant transition-all">Change Password</button>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Account Details Section -->
+<div class="lg:col-span-2 space-y-8">
+<section class="bg-surface-container-lowest rounded-2xl p-8 card-shadow">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">person</span>
+                                Account Details
+                            </h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-sm text-on-surface-variant ml-1">Full Name</label>
+<input class="w-full bg-surface-container-low border-transparent focus:border-primary focus:ring-4 focus:ring-primary/10 rounded-xl px-4 py-3 font-body-md transition-all" type="text" value="Alex Rivera"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-on-surface-variant ml-1">Email Address</label>
+<input class="w-full bg-surface-container-low border-transparent focus:border-primary focus:ring-4 focus:ring-primary/10 rounded-xl px-4 py-3 font-body-md transition-all" type="email" value="alex.rivera@design.co"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-on-surface-variant ml-1">Phone Number</label>
+<input class="w-full bg-surface-container-low border-transparent focus:border-primary focus:ring-4 focus:ring-primary/10 rounded-xl px-4 py-3 font-body-md transition-all" type="tel" value="+1 (555) 0123-4567"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-on-surface-variant ml-1">Address</label>
+<input class="w-full bg-surface-container-low border-transparent focus:border-primary focus:ring-4 focus:ring-primary/10 rounded-xl px-4 py-3 font-body-md transition-all" type="text" value="Market St, San Francisco, CA"/>
+</div>
+</div>
+</section>
+<section class="bg-surface-container-lowest rounded-2xl p-8 card-shadow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">link</span>
+                            Professional Links
+                        </h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4 bg-surface-container-low p-1 rounded-xl focus-within:ring-2 focus-within:ring-primary/20 transition-all">
+<div class="w-12 h-12 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">public</span>
+</div>
+<input class="flex-1 bg-transparent border-none focus:ring-0 font-body-md" placeholder="LinkedIn Profile URL" type="text" value="linkedin.com/in/alexrivera"/>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-low p-1 rounded-xl focus-within:ring-2 focus-within:ring-primary/20 transition-all">
+<div class="w-12 h-12 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">code</span>
+</div>
+<input class="flex-1 bg-transparent border-none focus:ring-0 font-body-md" placeholder="GitHub URL" type="text" value="github.com/arivera-design"/>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-low p-1 rounded-xl focus-within:ring-2 focus-within:ring-primary/20 transition-all">
+<div class="w-12 h-12 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">language</span>
+</div>
+<input class="flex-1 bg-transparent border-none focus:ring-0 font-body-md" placeholder="Portfolio Website" type="text" value="alexrivera.design"/>
+</div>
+</div>
+</section>
+</div>
+<!-- Sidebar Content -->
+<div class="space-y-8">
+<!-- Subscription Card -->
+<section class="bg-secondary text-on-secondary rounded-2xl p-8 card-shadow relative overflow-hidden group">
+<div class="absolute inset-0 opacity-10 pointer-events-none transition-transform group-hover:scale-110 duration-700">
+<!-- Glassmorphic pattern simulation -->
+<div class="absolute w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
+</div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-4">
+<h4 class="font-headline-md text-headline-md">Pro Plan</h4>
+<span class="bg-white/20 px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider">ACTIVE</span>
+</div>
+<p class="font-body-md mb-8 opacity-90">Unlock full access to AI tools, unlimited resumes, and career insights.</p>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined opacity-70">event</span>
+<span class="font-label-md">Renews on Oct 12, 2024</span>
+</div>
+<button class="w-full bg-on-secondary text-secondary py-3 rounded-xl font-label-md hover:bg-surface-container-lowest transition-colors">Manage Billing</button>
+</div>
+</section>
+<!-- Saved Documents -->
+<section class="bg-surface-container-lowest rounded-2xl p-6 card-shadow">
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-4 px-2">Recent Documents</h3>
+<div class="space-y-2">
+<div class="flex items-center gap-3 p-3 hover:bg-surface-container-low rounded-xl cursor-pointer transition-colors group">
+<div class="w-10 h-10 bg-primary/10 text-primary flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined">article</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-label-md text-on-surface truncate">Senior_UX_Designer_2024.pdf</p>
+<p class="text-[11px] text-on-surface-variant">Modified 2h ago</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+</div>
+<div class="flex items-center gap-3 p-3 hover:bg-surface-container-low rounded-xl cursor-pointer transition-colors group">
+<div class="w-10 h-10 bg-secondary/10 text-secondary flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined">history_edu</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-label-md text-on-surface truncate">Google_Cover_Letter.pdf</p>
+<p class="text-[11px] text-on-surface-variant">Modified 1d ago</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+</div>
+<div class="flex items-center gap-3 p-3 hover:bg-surface-container-low rounded-xl cursor-pointer transition-colors group">
+<div class="w-10 h-10 bg-tertiary-container/10 text-tertiary flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-label-md text-on-surface truncate">Creative_Portfolio_Resume.pdf</p>
+<p class="text-[11px] text-on-surface-variant">Modified 4d ago</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
+</div>
+</div>
+<button class="w-full mt-4 py-2 text-primary font-label-md hover:bg-primary/5 rounded-lg transition-colors">View All Documents</button>
+</section>
+</div>
+</div>
+<!-- Danger Zone -->
+<section class="bg-error-container/20 border border-error/20 rounded-2xl p-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div>
+<h3 class="font-headline-md text-headline-md text-error flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">warning</span>
+                            Danger Zone
+                        </h3>
+<p class="font-body-md text-on-surface-variant max-w-xl">Once you delete your account, there is no going back. All your resumes, AI history, and career progress will be permanently removed.</p>
+</div>
+<button class="px-6 py-3 border-2 border-error text-error rounded-xl font-label-md hover:bg-error hover:text-on-error transition-all shrink-0">Delete Account</button>
+</div>
+</section>
+</div>
+</main>
+<script>
+        // Simple micro-interactions
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('scale-[1.01]');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.classList.remove('scale-[1.01]');
+            });
+        });
+
+        // Sticky header transparency effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

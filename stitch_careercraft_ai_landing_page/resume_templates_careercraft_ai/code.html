@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Resume Templates | CareerCraft AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist:wght@400;500;600;700;800;900&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .resume-card-shadow {
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.04);
+        }
+        .resume-card-hover:hover {
+            box-shadow: 0px 20px 40px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#ffb786",
+                        "on-primary-container": "#fefcff",
+                        "inverse-primary": "#adc6ff",
+                        "surface": "#faf8ff",
+                        "secondary-fixed": "#e9ddff",
+                        "on-secondary-container": "#fffbff",
+                        "outline-variant": "#c2c6d6",
+                        "surface-container-low": "#f2f3ff",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "on-background": "#131b2e",
+                        "secondary-fixed-dim": "#d0bcff",
+                        "primary-fixed": "#d8e2ff",
+                        "secondary-container": "#8455ef",
+                        "on-primary-fixed": "#001a42",
+                        "on-tertiary-container": "#fffbff",
+                        "on-primary-fixed-variant": "#004395",
+                        "surface-dim": "#d2d9f4",
+                        "tertiary-container": "#b75b00",
+                        "tertiary": "#924700",
+                        "surface-container": "#eaedff",
+                        "primary-fixed-dim": "#adc6ff",
+                        "surface-bright": "#faf8ff",
+                        "error": "#ba1a1a",
+                        "on-surface": "#131b2e",
+                        "surface-container-highest": "#dae2fd",
+                        "tertiary-fixed": "#ffdcc6",
+                        "on-secondary-fixed": "#23005c",
+                        "background": "#faf8ff",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#005ac2",
+                        "outline": "#727785",
+                        "primary": "#0058be",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#5516be",
+                        "inverse-on-surface": "#eef0ff",
+                        "primary-container": "#2170e4",
+                        "surface-variant": "#dae2fd",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#424754",
+                        "secondary": "#6b38d4",
+                        "on-tertiary-fixed": "#311400",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e2e7ff",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#283044",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "3rem",
+                        "base": "4px",
+                        "sm": "1rem",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "md": "1.5rem",
+                        "xs": "0.5rem",
+                        "lg": "2rem",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Geist"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "label-md": ["Geist"],
+                        "display-lg": ["Geist"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary/20">
+<!-- SideNavBar Anchor -->
+<aside class="fixed left-0 top-0 h-full w-64 z-50 bg-surface dark:bg-surface-dim border-r border-outline-variant/30 flex flex-col p-md hidden md:flex">
+<div class="mb-xl px-xs">
+<h1 class="font-headline-md text-headline-md font-black bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">CareerCraft AI</h1>
+<p class="font-label-md text-label-md text-outline-variant mt-1">AI-Powered Career Hub</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low transition-all duration-200 rounded-xl group" href="#">
+<span class="material-symbols-outlined text-[24px]">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 bg-primary-container text-on-primary-container font-bold rounded-xl translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined text-[24px]">description</span>
+<span class="font-label-md text-label-md">Resume Builder</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low transition-all duration-200 rounded-xl" href="#">
+<span class="material-symbols-outlined text-[24px]">auto_awesome</span>
+<span class="font-label-md text-label-md">AI Assistant</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low transition-all duration-200 rounded-xl" href="#">
+<span class="material-symbols-outlined text-[24px]">mail</span>
+<span class="font-label-md text-label-md">Cover Letter</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low transition-all duration-200 rounded-xl" href="#">
+<span class="material-symbols-outlined text-[24px]">fact_check</span>
+<span class="font-label-md text-label-md">ATS Checker</span>
+</a>
+</nav>
+<div class="mt-auto space-y-4 pt-md">
+<button class="w-full bg-gradient-to-r from-primary to-secondary text-on-primary py-3 px-4 rounded-xl font-label-md text-label-md shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
+                Upgrade to Pro
+            </button>
+<div class="space-y-1">
+<a class="flex items-center gap-4 px-4 py-2 text-outline-variant hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">help</span>
+<span class="font-label-md text-label-md">Help Center</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-2 text-outline-variant hover:text-error transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+<span class="font-label-md text-label-md">Logout</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- TopNavBar Anchor -->
+<header class="fixed top-0 right-0 left-0 md:left-64 z-40 h-16 glass-nav bg-surface/80 border-b border-white/10 flex justify-between items-center px-lg">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant text-[20px]">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 text-label-md font-label-md focus:ring-2 focus:ring-primary/20 transition-all outline-none" placeholder="Search templates..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-surface-container-high/50 transition-colors relative">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full border-2 border-white"></span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-container-high/50 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">settings</span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden border border-outline-variant/30">
+<img alt="User Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVQRyH5NLtmKLLUAAx9WvexH7wZE8dpb9Jb8dOVIBala6MllmholYvLEP-MZRok1HFcENkqNNck6p3viXLjbYAoCaB5LCjWiCN2wu-N2lKyMBHEApk2nZHohNohFb4V8vrP22kr6-xSwjaoRf0Romlj1-DHHk0VUewY2dJPyoJE1pK5L9uYbqlfsoK5xLMx8b9rWeu1wC5a3t9Ajn38TfsMnPigokjib18ZdSLxFJPvsJjjZWym2gNVWIuRI_D3MwcAjOE2Dh3C19M"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="md:ml-64 pt-24 pb-12 px-lg min-h-screen">
+<!-- Page Header -->
+<div class="mb-xl max-w-3xl">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">Resume Templates</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Choose from our collection of professionally designed, ATS-optimized templates tailored for modern industry standards.</p>
+</div>
+<!-- Filter Bar -->
+<div class="flex flex-wrap items-center gap-3 mb-xl border-b border-outline-variant/10 pb-6">
+<button class="px-6 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-md shadow-primary/10 transition-all">All</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md border border-outline-variant/20 hover:border-primary/40 hover:text-primary transition-all">Modern</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md border border-outline-variant/20 hover:border-primary/40 hover:text-primary transition-all">Professional</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md border border-outline-variant/20 hover:border-primary/40 hover:text-primary transition-all">Minimal</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md border border-outline-variant/20 hover:border-primary/40 hover:text-primary transition-all">Creative</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md border border-outline-variant/20 hover:border-primary/40 hover:text-primary transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+                ATS-Friendly
+            </button>
+</div>
+<!-- Template Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<!-- Template Card 1 -->
+<div class="group relative bg-white rounded-2xl p-4 border border-outline-variant/10 resume-card-shadow resume-card-hover transition-all duration-300">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container-low border border-outline-variant/5">
+<img class="w-full h-full object-cover" data-alt="A premium executive resume template layout with a clean two-column structure. The left column features a subtle blue background with professional contact details and skills. The main right section displays a clear experience timeline in a modern Geist font. The overall aesthetic is professional, minimalist, and high-end, perfect for a corporate leadership position." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzTH_c3ODVvG7NeDH1zZGPDbqljRmlH1e-D7khE7rfM2bx2P5JDc1xZY7BK8gwAa72AX4eR8WGs_p5_jrTkX_aN_uAkrusUIMmvYm8FpvXvI4-R_RMMc2gquJZCCaQoNUGKZrtr2P2rwTAo2s6oeKpqPzagl3CpZqmYxLEOF9K6FCfTqhqkXfvKVjngW5jVjpfvzcrkQy72VCIImvROpKwEsM6n7gehyain0O_DcPPLzRtR9YOBc2DkF9BYVSnFUpY0Tu4uGCDvLiU"/>
+<!-- Badges -->
+<div class="absolute top-3 left-3 flex flex-col gap-2">
+<span class="px-3 py-1 bg-surface/90 backdrop-blur-md rounded-full font-label-sm text-label-sm text-primary flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+                            ATS Optimized
+                        </span>
+</div>
+<!-- Actions Overlay -->
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3 p-6">
+<button class="w-full bg-white text-primary font-bold py-3 px-6 rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="material-symbols-outlined">description</span>
+                            Use Template
+                        </button>
+<button class="w-full bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-6 rounded-xl font-label-md text-label-md backdrop-blur-md border border-white/30 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                            Live Preview
+                        </button>
+</div>
+</div>
+<div class="flex justify-between items-start px-1">
+<div>
+<h3 class="font-headline-md text-[18px] text-on-surface mb-1">The Executive</h3>
+<p class="font-label-sm text-label-sm text-outline-variant">Professional • Corporate</p>
+</div>
+<button class="text-outline-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Template Card 2 -->
+<div class="group relative bg-white rounded-2xl p-4 border border-outline-variant/10 resume-card-shadow resume-card-hover transition-all duration-300">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container-low border border-outline-variant/5">
+<img class="w-full h-full object-cover" data-alt="A modern minimalist resume template with generous white space and elegant typography. The layout features a centered name in a bold Geist font followed by a sleek summary section. Skills are displayed as subtle glassmorphic chips. The design feels airy, visionary, and sophisticated, ideal for creative directors or senior designers in the tech industry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_Cj2_Mj3MbfGWtBCM1B4HCOeu_pCsksVSQO0M_42Ei8QACpjauEgznVAI9TvZipVx9u0kka2C4toIury9Sqvtx6N7SBZK--3I9pf-nxdBemWAyCZ6KxsffXAM6nW-XB7vI-7EVku-lNAlhwJz8jNqVsGw0vho6nTXElNhuDujzXoc6AIJ3X6pkQ6ZvY73dGJbaiAqEomx5AEeA7UFRym5Zo0VJtxpG0xUiQy328YfDwN3efj7APVhjC1b19wvfU53C2wydzSZcBdj"/>
+<div class="absolute top-3 left-3 flex flex-col gap-2">
+<span class="px-3 py-1 bg-secondary text-white rounded-full font-label-sm text-label-sm flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">star</span>
+                            Premium
+                        </span>
+</div>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3 p-6">
+<button class="w-full bg-white text-primary font-bold py-3 px-6 rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            Use Template
+                        </button>
+<button class="w-full bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-6 rounded-xl font-label-md text-label-md backdrop-blur-md border border-white/30 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                            Live Preview
+                        </button>
+</div>
+</div>
+<div class="flex justify-between items-start px-1">
+<div>
+<h3 class="font-headline-md text-[18px] text-on-surface mb-1">Modern Minimalist</h3>
+<p class="font-label-sm text-label-sm text-outline-variant">Tech • Clean</p>
+</div>
+<button class="text-outline-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Template Card 3 -->
+<div class="group relative bg-white rounded-2xl p-4 border border-outline-variant/10 resume-card-shadow resume-card-hover transition-all duration-300">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container-low border border-outline-variant/5">
+<img class="w-full h-full object-cover" data-alt="A creative professional resume template featuring an asymmetrical bento-grid layout. Vibrant purple and blue gradient accents highlight key sections like 'Projects' and 'Impact Metrics'. Infographic elements are used to visualize software proficiency. The mood is energetic, methodical, and forward-thinking, perfect for digital marketing or product management roles." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY98cpZslp1nLpkTQODK27cq6JISIaB9doByRKEjxjU3NPvNWN5b7M0TeJlzhNZ7IDQlY3zSa0RHjftUtoNfdP5GypIE8CHDeuK495EvRg6k6YXr7uJIaFKXwSHlpUojdvmDBUYLabBsHVB8aj2sZwPt723CPngG2R2MDWjGShO1DjbraD8Zo7GVzqstywefwWxdWHWdxlRe6taVFRt2P9XMlgi4U6QRBVVf27eWvu4KH2WN__1V1pfrwedg3cPmeu91TMw10ZgWVQ"/>
+<div class="absolute top-3 left-3 flex flex-col gap-2">
+<span class="px-3 py-1 bg-surface/90 backdrop-blur-md rounded-full font-label-sm text-label-sm text-primary flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+                            ATS Optimized
+                        </span>
+</div>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3 p-6">
+<button class="w-full bg-white text-primary font-bold py-3 px-6 rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            Use Template
+                        </button>
+<button class="w-full bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-6 rounded-xl font-label-md text-label-md backdrop-blur-md border border-white/30 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                            Live Preview
+                        </button>
+</div>
+</div>
+<div class="flex justify-between items-start px-1">
+<div>
+<h3 class="font-headline-md text-[18px] text-on-surface mb-1">Creative Pro</h3>
+<p class="font-label-sm text-label-sm text-outline-variant">Digital • Design</p>
+</div>
+<button class="text-outline-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Template Card 4 -->
+<div class="group relative bg-white rounded-2xl p-4 border border-outline-variant/10 resume-card-shadow resume-card-hover transition-all duration-300">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container-low border border-outline-variant/5">
+<img class="w-full h-full object-cover" data-alt="A high-end academic and research-focused CV template. It uses a serif body font paired with Geist headlines for a classic yet contemporary feel. Long-form publication lists are formatted with precise vertical rhythm and subtle divider lines. The aesthetic is scholarly, professional, and methodical, designed for educators, researchers, or scientists." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2NrBI_1v8LwGy5iC15DnS7rbd88MpK57Cug9cE69VzwgWRRgalOUKF_i3lhj9cBkx5hOvbCcExdPNfiZuhtQhvYvVXWdVlXT57ukgE4NgKiWtYjp1zL9SmLx8K5WEsZHs-7fAMnbMMnUZUQIAqq2X4gznOWpN2qlNXKW_JqcCiRQxkKmCamzVHEBc8B9kn1z6_Zh4H1tivU2iMhQ96CG0_sFN9ckGAq_r4oAQKrkD8TBPN0WcEhoPRv4z-ekLw11SDpbjON1yuZab"/>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3 p-6">
+<button class="w-full bg-white text-primary font-bold py-3 px-6 rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            Use Template
+                        </button>
+<button class="w-full bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-6 rounded-xl font-label-md text-label-md backdrop-blur-md border border-white/30 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                            Live Preview
+                        </button>
+</div>
+</div>
+<div class="flex justify-between items-start px-1">
+<div>
+<h3 class="font-headline-md text-[18px] text-on-surface mb-1">Scholar Elite</h3>
+<p class="font-label-sm text-label-sm text-outline-variant">Academic • CV</p>
+</div>
+<button class="text-outline-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-fill">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Template Card 5 -->
+<div class="group relative bg-white rounded-2xl p-4 border border-outline-variant/10 resume-card-shadow resume-card-hover transition-all duration-300">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container-low border border-outline-variant/5">
+<img class="w-full h-full object-cover" data-alt="An entry-level resume template with a focus on education and skills. Large, friendly typography and a single-column layout make it easy to scan. It features a bright, optimistic light-mode color palette with soft primary blue accents. The design is approachable yet professional, perfect for students or recent graduates starting their career journey." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj59dNc86clhsdv4ejhaN13N3mlhuU4nEk4u_ktDOU2Yek92oxwPbM5D9M6i17IrsHooCZxfQO60AH9LuSEavXiM7MsiBHLtrNi1TiKNN02Ra12feZ6hR07hxbdmMIi_888fWpoJsmNZFagiLZMPji7K_Z_ijciS9Y8uTHwtbKSKfOtVvHOB0c-gqYnpFdIGjCf5jGYCuF_DmeswjObFKAScE2hcOtIxuEHTyiPqLOCqQWWVHYoUeyNfOC92fqLr6-ET-W4RfKh3Rp"/>
+<div class="absolute top-3 left-3 flex flex-col gap-2">
+<span class="px-3 py-1 bg-surface/90 backdrop-blur-md rounded-full font-label-sm text-label-sm text-primary flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+                            ATS Optimized
+                        </span>
+</div>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3 p-6">
+<button class="w-full bg-white text-primary font-bold py-3 px-6 rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            Use Template
+                        </button>
+<button class="w-full bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-6 rounded-xl font-label-md text-label-md backdrop-blur-md border border-white/30 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                            Live Preview
+                        </button>
+</div>
+</div>
+<div class="flex justify-between items-start px-1">
+<div>
+<h3 class="font-headline-md text-[18px] text-on-surface mb-1">First Impression</h3>
+<p class="font-label-sm text-label-sm text-outline-variant">Entry-Level • Bold</p>
+</div>
+<button class="text-outline-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Template Card 6 -->
+<div class="group relative bg-white rounded-2xl p-4 border border-outline-variant/10 resume-card-shadow resume-card-hover transition-all duration-300">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container-low border border-outline-variant/5">
+<img class="w-full h-full object-cover" data-alt="A dark-mode inspired resume template (presented on a light UI) using a deep navy header and sidebar. White text and silver accents provide high contrast. The layout uses a sophisticated 3-column footer for references and awards. The style is visionary and premium, communicating high performance and executive presence for the financial or legal sectors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWFojLJPel57gLFRJZ-UmlvlN0zIw8iwHJk8RqIGYJlbE6d1i8EursbTtYwJisd7wtRU5bYPAE_U-TlzI-O0wgpG6OjapRlCEVs_hINWR7zQdpZ71nGBc6XCYDYVsdO75ZrzskIV-nN5m1np-D4s3X1IySLcku0yrohzjszw5av2syplyeaSSgeT5xsT_Gb_YxJPWNxqpODkFhqSlB9mRfUKiyOdXhfDV9H82xtDnkWM0LkvmkceZtcuSDuVFJSo-gCCNuODZ-kK5J"/>
+<div class="absolute top-3 left-3 flex flex-col gap-2">
+<span class="px-3 py-1 bg-secondary text-white rounded-full font-label-sm text-label-sm flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">star</span>
+                            Premium
+                        </span>
+</div>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3 p-6">
+<button class="w-full bg-white text-primary font-bold py-3 px-6 rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            Use Template
+                        </button>
+<button class="w-full bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-6 rounded-xl font-label-md text-label-md backdrop-blur-md border border-white/30 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                            Live Preview
+                        </button>
+</div>
+</div>
+<div class="flex justify-between items-start px-1">
+<div>
+<h3 class="font-headline-md text-[18px] text-on-surface mb-1">The Strategist</h3>
+<p class="font-label-sm text-label-sm text-outline-variant">Finance • Legal</p>
+</div>
+<button class="text-outline-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Template Card 7 -->
+<div class="group relative bg-white rounded-2xl p-4 border border-outline-variant/10 resume-card-shadow resume-card-hover transition-all duration-300">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container-low border border-outline-variant/5">
+<img class="w-full h-full object-cover" data-alt="A software engineer resume template with a focus on code-like structure. It features a sidebar for technical stacks and GitHub/LinkedIn links with custom icons. Key achievements are bulleted with monospace font highlights for tech keywords. The design is clean, methodical, and data-driven, highlighting project impact and technical proficiency." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuRmxxRDUkw-C9t3uQeL1W6f4I5-2ms_JgKEvkp9BnUYB0YMYyP55rqOLtg_SCs1hrYhoz9DKPaz9epCUUYibqdfNXVmT9k5CTxnKqdU0V-c7Xo0eHgwVjVc_qYPnCEZWgecd7sEGARJTQ6GdjvOWtBqumKI4YM7tSK-bxmucnmBlAMu1DDwilmCo3V1gF9BSFZGPOPqdSH3dxhIEJCWBonzJ-BHF2vP9_rRCMSzxUjYY5kcLjwHHNUVRQQcj5NT1d-Ao_SbgRu9xJ"/>
+<div class="absolute top-3 left-3 flex flex-col gap-2">
+<span class="px-3 py-1 bg-surface/90 backdrop-blur-md rounded-full font-label-sm text-label-sm text-primary flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+                            ATS Optimized
+                        </span>
+</div>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3 p-6">
+<button class="w-full bg-white text-primary font-bold py-3 px-6 rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            Use Template
+                        </button>
+<button class="w-full bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-6 rounded-xl font-label-md text-label-md backdrop-blur-md border border-white/30 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                            Live Preview
+                        </button>
+</div>
+</div>
+<div class="flex justify-between items-start px-1">
+<div>
+<h3 class="font-headline-md text-[18px] text-on-surface mb-1">Code Architect</h3>
+<p class="font-label-sm text-label-sm text-outline-variant">Engineering • Tech</p>
+</div>
+<button class="text-outline-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Template Card 8 -->
+<div class="group relative bg-white rounded-2xl p-4 border border-outline-variant/10 resume-card-shadow resume-card-hover transition-all duration-300">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container-low border border-outline-variant/5">
+<img class="w-full h-full object-cover" data-alt="A freelancer and creative professional resume template with a portfolio-first layout. Large high-quality image placeholders represent key work samples. The personal brand section is set in an elegant, oversized Geist display font. The overall aesthetic is gallery-like, minimalist, and visionary, designed to showcase individual style and multi-disciplinary talent." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYRqNIan0M_9dv64xLBpHxs5NIE_PxismMMqlOv3apf8724fNeeuh9CIEqIeMJBtmL72cKniaswRky9TBi3f6-tCcSE6bDBB57gXLg2qjeCI_A4Nk2FWJBhojEzJPXDTI5W1IQt9ciwyA8LQiY-3gBqnGn-gfSN3ICR0L6o7jhZdYU6iK5DHM4IWc6hwuyQGs1zxVcDIug6-VRZBIrWojh1BlFqy5aMY-5oTxnshe7grrcRrHc9goGyR6Uz61cc4eZHmm8BG-T74UQ"/>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3 p-6">
+<button class="w-full bg-white text-primary font-bold py-3 px-6 rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            Use Template
+                        </button>
+<button class="w-full bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-6 rounded-xl font-label-md text-label-md backdrop-blur-md border border-white/30 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                            Live Preview
+                        </button>
+</div>
+</div>
+<div class="flex justify-between items-start px-1">
+<div>
+<h3 class="font-headline-md text-[18px] text-on-surface mb-1">Portfolio Showcase</h3>
+<p class="font-label-sm text-label-sm text-outline-variant">Creative • Freelance</p>
+</div>
+<button class="text-outline-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="mt-xl flex flex-col items-center gap-6">
+<button class="px-8 py-3 bg-surface-container-highest/50 hover:bg-surface-container-highest text-on-surface font-label-md text-label-md rounded-xl transition-all border border-outline-variant/20">
+                Load More Templates
+            </button>
+<p class="font-label-sm text-label-sm text-outline-variant">Showing 8 of 42 templates</p>
+</div>
+</main>
+<!-- FAB for quick action -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-br from-primary to-secondary text-white rounded-full flex items-center justify-center shadow-xl shadow-primary/30 hover:scale-110 active:scale-95 transition-all z-50 md:hidden">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</button>
+<script>
+        // Micro-interactions and simple state handling
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                // Ripple effect could be added here
+                if(this.textContent.trim() === 'Use Template') {
+                    console.log('Template selected');
+                }
+            });
+        });
+
+        // Simple Filter switching
+        const filters = document.querySelectorAll('.flex.flex-wrap button');
+        filters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                filters.forEach(f => {
+                    f.classList.remove('bg-primary', 'text-on-primary', 'shadow-md', 'shadow-primary/10');
+                    f.classList.add('bg-surface-container-lowest', 'text-on-surface-variant', 'border', 'border-outline-variant/20');
+                });
+                filter.classList.add('bg-primary', 'text-on-primary', 'shadow-md', 'shadow-primary/10');
+                filter.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant', 'border', 'border-outline-variant/20');
+            });
+        });
+    </script>
+</body></html>
