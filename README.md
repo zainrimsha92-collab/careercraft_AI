@@ -202,26 +202,23 @@ Add screenshots of the following pages.
 
 ### ✨ Features Section
 
-*(<img width="1600" height="740" alt="WhatsApp Image 2026-07-26 at 8 49 48 PM" src="https://github.com/user-attachments/assets/dd727d0d-c7f4-4b0c-8895-0c2d51e639bb" />
-)*
+*<img width="1600" height="758" alt="WhatsApp Image 2026-07-26 at 9 14 53 PM" src="https://github.com/user-attachments/assets/da62afad-6801-49d8-a9d5-a952fae0bb33" />
+*
 
 ---
 
 ### 📄 Resume Generation
 
-*(Insert Screenshot Here)*
+*<img width="1600" height="788" alt="WhatsApp Image 2026-07-26 at 9 13 04 PM" src="https://github.com/user-attachments/assets/850ed0fd-eaac-4c75-a403-d35051ef41b3" />
+*
 
 ---
 
-### 💼 Job Description Analyzer
-
-*(Insert Screenshot Here)*
-
----
 
 ### 📱 Responsive Mobile View
 
-*(Insert Screenshot Here)*
+*<img width="338" height="1280" alt="WhatsApp Image 2026-07-26 at 9 27 51 PM" src="https://github.com/user-attachments/assets/3c9bdf1c-7298-4e7b-9ff9-fae719299643" />
+*
 
 ---
 
