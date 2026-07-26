@@ -197,13 +197,13 @@ Add screenshots of the following pages.
 
 ### 🏠 Home Page
 
-*![Uploading image.png…]()
-*
+*<img width="1600" height="830" alt="WhatsApp Image 2026-07-26 at 8 46 23 PM" src="https://github.com/user-attachments/assets/441aae97-44eb-482e-b713-721a521479c2" />*
 
 
 ### ✨ Features Section
 
-*(Insert Screenshot Here)*
+*(<img width="1600" height="740" alt="WhatsApp Image 2026-07-26 at 8 49 48 PM" src="https://github.com/user-attachments/assets/dd727d0d-c7f4-4b0c-8895-0c2d51e639bb" />
+)*
 
 ---
 
